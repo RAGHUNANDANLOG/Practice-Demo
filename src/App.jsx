@@ -2,6 +2,7 @@ import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { formSchema, OPTIONS } from "./validation";
 import Combobox from "./components/Combobox";
+import HindiInput from "./components/HindiInput";
 
 function App() {
   const {
@@ -61,6 +62,16 @@ function App() {
 
           <button type="submit" className="submit-btn">Continue to Next Step</button>
         </form>
+      </div>
+
+      {/* ── Hindi Transliteration Card ── */}
+      <div className="form-card" style={{ marginTop: "24px", maxWidth: "440px", width: "100%" }}>
+        <h1>Hindi Typing</h1>
+        <p className="subtitle">Type in English — see Hindi instantly ✨</p>
+        <HindiInput
+          label="Type & Transliterate"
+          placeholder="e.g. namaste, bharat, desh..."
+        />
       </div>
     </div>
   );
